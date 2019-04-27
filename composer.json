@@ -1,0 +1,12 @@
+{
+    "name": "Meteostation",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vadym",
+            "email": "vadosdv00000@gmail.com"
+        }
+    ],
+    "require": {}
+}

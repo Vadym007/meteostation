@@ -1,18 +1,23 @@
 <?php
 session_start(); 
+
+//vendor autoload
 require __DIR__.'/../vendor/autoload.php';
 
-use App\Core\Router;
+//env variables
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+if(file_exists($file = __DIR__.'/../env.php')) {
+    include $file;
+}
 
-const TOKEN = '844981219:AAGKuAVfbzzhgstQ3yy8sTVVeC6I6ZWJCEc';
-const SITE = 'https://diplomastation.000webhostapp.com/';
+if( getenv('STATION_TOKEN') ) {
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+} 
 
 $routes = require_once __DIR__ . '/../config/routes.php';
-$router = new Router($routes);
+$router = new App\Core\Router($routes);
 $router->run();
 
 

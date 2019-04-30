@@ -4,7 +4,6 @@ namespace App\Components;
 
 class Config
 {
-
     protected const CONFIG_DIR = __DIR__ . '/../../config/';
 
     public static function get(string $param)

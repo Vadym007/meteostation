@@ -1,3 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+.content {
+min-height: calc(100vh - 130px);
+}
+body {
+    background: rgb(226, 226, 226);
+}
+header, footer {
+    background: #000;
+    padding: 15px;
+    font-family: 'Anton', sans-serif;
+    color: #EDF5E1;
+}
+
 header h2 {
     text-align: center;
 }
+
+.update-container {
+    background: #EDF5E1;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 25px 0;
+    font-size: 20px;
+
+}
+
+.chart-container {
+    border-radius: 10px;
+    background: #EDF5E1;
+    margin-bottom: 25px;
+}
+
+.chart-container .last-value {
+    padding: 0 15px;
+    text-align: left;
+}
+.chart {
+    margin-bottom: 5px;
+}
+

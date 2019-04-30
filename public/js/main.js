@@ -7,14 +7,14 @@ var chart = new Chart(ctx, {
     data: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [{
-            label: 'My First dataset',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45]
+            label: 'Статистика температури за останній день',
+            backgroundColor: 'rgb(255, 210, 10)',
+            borderColor: 'rgb(255, 200, 10)',
+            data: [1, 7, 5, 2, 20, 3, 33]
         }]
     },
 
-    // Configuration options go here
+    // Configuration options go here    
     options: {}
 });
 
@@ -27,10 +27,10 @@ var chart = new Chart(ctx, {
     data: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [{
-            label: 'My First dataset',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45]
+            label: 'Статистика вологості повітря за останній день',
+            backgroundColor: 'rgb(14, 197, 230)',
+            borderColor: 'rgb(14, 197, 200)',
+            data: [0, 10, 5, 2, 20, 24, 30]
         }]
     },
 
@@ -47,9 +47,9 @@ var chart = new Chart(ctx, {
     data: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [{
-            label: 'My First dataset',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            label: 'Статистика освітленості за останній день',
+            backgroundColor: 'rgb(2, 245, 62)',
+            borderColor: 'rgb(2, 175, 62)',
             data: [0, 10, 5, 2, 20, 30, 45]
         }]
     },

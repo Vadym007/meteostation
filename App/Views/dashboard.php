@@ -4,54 +4,71 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
-        <title>Mrteostation</title>
+        <title>Diploma Y.V.V.</title>
 
         <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
-
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
         <link href="css/bootstrap.css" rel="stylesheet" >
         <link href="css/style.css" rel="stylesheet" >
 
     </head>
     <body class="text-center">
         <header>
-            <h2>Meteostation</h2>
+            <h2>Diploma meteostation</h2>
         </header>
-        <hr>
-        <main>
+        <main class="content">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-5">
-                        <h3>Останні показники</h3>
-
-                        <ul>
-                            <li>Дата: <?=date('H:i, d-m-Y')?> </li>
-                            <li>Температура: 22 С</li>
-                            <li>Вологість: 80%</li>
-                            <li>Освітленість: 444</li>
-                        </ul>
-
-                    </div>
-                    <div class="col-md-7">
-                        <h3>Статистика</h3>
-                        <div class="row">
-                            <canvas id="temp"></canvas>
+                    <div class="col-md-12">
+                        <div class="update-container">
+                            Дата останнього оновлення даних: <strong>15:30, 30-04-2019</strong>
                         </div>
-                        <hr>
-                        <div class="row">
-                            <canvas id="humidity"></canvas>
-                        </div>  
-                        hr
-                        <div class="row">
-                            <canvas id="ligth"></canvas>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="chart-container">
+                            <h3>Температура</h3>
+                            <div class="last-value">
+                                Останній показник: <strong>20°C</strong>
+                            </div>
+                            <div class="chart">
+                                <canvas id="temp"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="chart-container">
+                            <h3>Вологість</h3>
+                            <div class="last-value">
+                                Останній показник: <strong>50%</strong> 
+
+                            </div>
+
+                            <div class="chart">
+                                <canvas id="humidity"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="chart-container">
+
+                            <h3>Освітленість</h3>
+                            <div class="last-value">
+                                Останній показник: <strong>5000Л</strong> 
+                            </div>
+
+                            <div class="chart">
+                                <canvas id="ligth"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
         </main>
-        <hr>
         <footer>
-            By <strong>Vadym Yakovenko</strong>
+            Dashboard was created as diploma work by <a href="https://www.instagram.com/vadyakovenko/">Vadym Yakovenko</a> 
         </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
         <script src="js/main.js"></script>

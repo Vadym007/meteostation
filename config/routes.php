@@ -4,6 +4,16 @@ return [
     [
         'url' => '',
         'action' => 'DashboardController@index',
-        'method' => 'get',
     ],
+    [
+        'url' => 'telegram/webhook',
+        'action' => 'TelegramController@webhook'
+    ],
+    [
+        'url' => 'telegram/webhook/set',
+        'action' => 'TelegramController@setWebhook'
+    ],    [
+        'url' => 'telegram/webhook/delete',
+        'action' => 'TelegramController@deleteWebhook'
+    ]
 ];

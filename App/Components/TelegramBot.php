@@ -14,7 +14,7 @@ class TelegramBot
     public function __construct(string $token)
     {
         $this->token = $token;
-        $this->baseUrl = 'https://api.telegram.org/bot' . TOKEN . '/';
+        $this->baseUrl = 'https://api.telegram.org/bot' . $token . '/';
     }
 
     public function getUpdates($offset = null, $limit = null)
@@ -56,12 +56,12 @@ class TelegramBot
     {
         $url = $this->baseUrl . 'setWebhook?' . http_build_query(['url' => $url]);
 
-        return json_decode(file_get_contents($url), JSON_OBJECT_AS_ARRAY);
+        return file_get_contents($url);
     }
 
     public function deleteWebhook()
     {
-        return json_decode(file_get_contents($this->baseUrl . 'deleteWebhook'), JSON_OBJECT_AS_ARRAY);
+        return file_get_contents($this->baseUrl . 'deleteWebhook');
     }
 
     public static function commandsList()

@@ -19,7 +19,8 @@ class TelegramBot
 
     public function getUpdates($offset = null, $limit = null)
     {
-
+        $params = [];
+        
         if( $offset) {
             $params['offset'] = $offset;
         } elseif( $lastUpdate =  $this->getLastUpdate() ) {

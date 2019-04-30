@@ -68,7 +68,7 @@
 
         </main>
         <footer>
-            Dashboard was created as diploma work by <a href="https://www.instagram.com/vadyakovenko/">Vadym Yakovenko</a> 
+            Dashboard was created as diploma works by <a href="https://www.instagram.com/vadyakovenko/">Vadym Yakovenko</a> 
         </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
         <script src="js/main.js"></script>

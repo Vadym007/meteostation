@@ -22,6 +22,6 @@ class Config
 
     private static function load($fileName)
     {
-        return require_once(self::CONFIG_DIR . $fileName . '.php');
+        return include(self::CONFIG_DIR . $fileName . '.php');
     }
 }

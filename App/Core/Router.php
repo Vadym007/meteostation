@@ -47,6 +47,7 @@ class Router {
                 }
  
                 call_user_func_array([new $controllerName, $action], []);
+                die;
             }
         }
  

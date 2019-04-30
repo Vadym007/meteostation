@@ -12,8 +12,13 @@ return [
     [
         'url' => 'telegram/webhook/set',
         'action' => 'TelegramController@setWebhook'
-    ],    [
+    ],    
+    [
         'url' => 'telegram/webhook/delete',
         'action' => 'TelegramController@deleteWebhook'
+    ],
+    [
+        'url' => 'telegram/updates',
+        'action' => 'TelegramController@updates'
     ]
 ];

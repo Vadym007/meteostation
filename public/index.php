@@ -1,22 +1,19 @@
 <?php
 session_start(); 
 
+use App\Components\Config;
+
 //vendor autoload
 require __DIR__.'/../vendor/autoload.php';
 
-//env variables
-
-if(file_exists($file = __DIR__.'/../env.php')) {
-    include $file;
-}
-
-if( getenv('STATION_TOKEN') ) {
+//debug
+if(Config::get('app.debug')) {
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 } 
 
-$routes = require_once __DIR__ . '/../config/routes.php';
+$routes = Config::all('routes');
 $router = new App\Core\Router($routes);
 $router->run();
 

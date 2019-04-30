@@ -1,5 +1,5 @@
 {
-    "name": "Meteostation",
+    "name": "vadym007/meteostation-diploma",
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -8,5 +8,14 @@
             "email": "vadosdv00000@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        },
+        "classmap": [
+            
+        ]
+    }
 }

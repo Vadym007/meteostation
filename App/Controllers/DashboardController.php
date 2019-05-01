@@ -12,8 +12,11 @@ class DashboardController extends Controller
     {
         $indicators = Indicator::all();
 
-        $lastUpdate = $indicators[count($indicators)-1]['created_at'];
-        $lastUpdate = Carbon::parse($lastUpdate)->format('H:i, d-m-Y');
+        $lastUpdate = null;
+        if(count($indicators)) {
+            $lastUpdate = $indicators[count($indicators)-1]['created_at'];
+            $lastUpdate = Carbon::parse($lastUpdate)->format('H:i, d-m-Y');
+        }
 
         return $this->renderView('dashboard', ['indicators' => $this->prepareData($indicators), 'lastUpdate' => $lastUpdate]);
     }

@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="update-container">
-                            Дата останнього оновлення даних: <strong> <?=$lastUpdate?></strong>
+                            Дата останнього оновлення даних: <strong> <?=$lastUpdate ? $lastUpdate : '-'?></strong>
                         </div>
                     </div>
                 </div>

@@ -23,4 +23,15 @@ class Indicator
         $sql = "SELECT * FROM ". self::TABLE;
         return $db->select($sql);
     }
+
+    public static function last()
+    {
+        $all = self::all();
+        
+        if(count($all)) {
+            return $all[count($all)-1];
+        }
+        
+        return null;
+    }
 }

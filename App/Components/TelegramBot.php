@@ -2,6 +2,8 @@
 
 namespace App\Components;
 
+use Carbon\Carbon;
+
 class TelegramBot 
 {
     public const TEMPERATURE_COMMAND = '/temperature';
@@ -74,17 +76,22 @@ class TelegramBot
         ];
     }
 
-    public function answerForCommand(string $command)
+    public function answerForCommand(string $command, $indicator)
     {
-        if($command == self::TEMPERATURE_COMMAND) {
-            return 'Температура повітря ___ °C на ' . date('H:i, d-m-Y');
-        } 
-        if($command == self::HUMIDITY_COMMAND) {
-            return 'Вологість повітря __ % на ' . date('H:i, d-m-Y');
-        } 
-        if($command == self::LIGHT_COMMAND) {
-            return 'Освітленість __ Л на ' . date('H:i, d-m-Y');
-        } 
+        if(!$indicator && in_array($command, self::commandsList()) ) {
+            return 'Вибачте, показники поки що відсутні';
+        } else {
+            $date = Carbon::parse($indicator['created_at'])->format('H:i, d-m-Y');
+            if($command == self::TEMPERATURE_COMMAND) {
+                return "Температура повітря {$indicator['temperature']}°C cтаном на " . $date;
+            } 
+            if($command == self::HUMIDITY_COMMAND) {
+                return "Вологість повітря {$indicator['humidity']}% станом на " . $date;
+            } 
+            if($command == self::LIGHT_COMMAND) {
+                return "Освітленість {$indicator['light']}Л на " . $date;
+            } 
+        }
 
         return null;
     }

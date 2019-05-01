@@ -5,6 +5,15 @@ return [
         'url' => '',
         'action' => 'DashboardController@index',
     ],
+
+    //api
+    [
+        'url' => 'api/set',
+        'action' => 'ApiController@set',
+    ],
+
+
+    //telegram
     [
         'url' => 'telegram/webhook',
         'action' => 'TelegramController@webhook'

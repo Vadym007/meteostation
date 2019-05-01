@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="update-container">
-                            Дата останнього оновлення даних: <strong>15:30, 30-04-2019</strong>
+                            Дата останнього оновлення даних: <strong> <?=$lastUpdate?></strong>
                         </div>
                     </div>
                 </div>
@@ -72,5 +72,34 @@
         </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            var data = {
+                lables: [
+                    <?php foreach($indicators as $indicator):?>
+                        '<?=$indicator['created_at']?>',
+                    <?php endforeach?>
+                ],
+
+                temperature: [
+                    <?php foreach($indicators as $indicator):?>
+                        '<?=$indicator['temperature']?>',
+                    <?php endforeach?>
+                ],
+                humidity: [
+                    <?php foreach($indicators as $indicator):?>
+                        '<?=$indicator['humidity']?>',
+                    <?php endforeach?>
+                ],
+
+                light: [
+                    <?php foreach($indicators as $indicator):?>
+                        '<?=$indicator['light']?>',
+                    <?php endforeach?>
+                ],
+            };
+
+            runCharts(data);
+
+        </script>
     </body>
 </html>

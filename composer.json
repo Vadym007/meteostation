@@ -8,7 +8,9 @@
             "email": "vadosdv00000@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "nesbot/carbon": "^2.17"
+    },
 
     "autoload": {
         "psr-4": {

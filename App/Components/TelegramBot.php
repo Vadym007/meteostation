@@ -89,7 +89,7 @@ class TelegramBot
                 return "Вологість повітря {$indicator['humidity']}% станом на " . $date;
             } 
             if($command == self::LIGHT_COMMAND) {
-                return "Освітленість {$indicator['light']}Л на " . $date;
+                return "Освітленість {$indicator['light']}Л станом на " . $date;
             } 
         }
 

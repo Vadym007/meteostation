@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use App\Components\DB;
+use Carbon\Carbon;
+use App\Components\Config;
 
 class Indicator
 {
@@ -11,6 +13,7 @@ class Indicator
     public static function create(array $params)
     {
 
+        $params['created_at'] = Carbon::now(Config::get('app.timezone'));
         $db = DB::getInstance();
         $result = $db->insert(self::TABLE, $params);
  

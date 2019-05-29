@@ -14,7 +14,7 @@
     </head>
     <body class="text-center">
         <header>
-            <h2>Diploma meteostation</h2>
+            <h2>Monitoring system</h2>
         </header>
         <main class="content">
             <div class="container">
@@ -30,7 +30,7 @@
                         <div class="chart-container">
                             <h3>Температура</h3>
                             <div class="last-value">
-                                Останній показник: <strong>20°C</strong>
+                                Останній показник: <strong><?=$indicators[count($indicators)-1]['temperature']?>°C</strong>
                             </div>
                             <div class="chart">
                                 <canvas id="temp"></canvas>
@@ -41,7 +41,7 @@
                         <div class="chart-container">
                             <h3>Вологість</h3>
                             <div class="last-value">
-                                Останній показник: <strong>50%</strong> 
+                                Останній показник: <strong><?=$indicators[count($indicators)-1]['humidity']?>%</strong> 
 
                             </div>
 
@@ -55,7 +55,7 @@
 
                             <h3>Освітленість</h3>
                             <div class="last-value">
-                                Останній показник: <strong>5000Л</strong> 
+                                Останній показник: <strong><?=$indicators[count($indicators)-1]['light']?>Люкс</strong> 
                             </div>
 
                             <div class="chart">

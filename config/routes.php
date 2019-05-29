@@ -29,5 +29,9 @@ return [
     [
         'url' => 'telegram/updates',
         'action' => 'TelegramController@updates'
+    ],
+    [
+        'url' => 'form',
+        'action' => 'FormController@show'
     ]
 ];
